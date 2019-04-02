@@ -259,9 +259,10 @@
             else if (d.name in ["Realistic Fiction", "Social Justice"]) return d.radius + 40       
             return d.radius + 20
           }))
-          .on('tick', ticked)
+          
+          simulation.tick(300)
 
-        function ticked() {
+        
           var u = themesSvg
               .selectAll('g')
               .data(nodes)
@@ -289,8 +290,7 @@
               })
             
           u.exit().remove()
-        }
-        
+                
         /*
         Third visualisation
         */
